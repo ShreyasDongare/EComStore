@@ -16,6 +16,7 @@ const About = () => {
   };
   return (
     <div>
+      
       <HeroSection heroData={heroData} />
     </div>
   );
