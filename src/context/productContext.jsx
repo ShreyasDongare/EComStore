@@ -21,7 +21,7 @@ const initialState = {
 const DataProvider =({children})=>{
 
     const [state, dispatch] = useReducer(reducer, initialState)
-    console.log(state)
+    // console.log(state)
 
 const fetchProducts = async (url) => {
     dispatch({type:"IS_LOADING"})
@@ -40,7 +40,7 @@ useEffect(() => {
 }, []);
 
 
-   return  <AppContext.Provider >{children}</AppContext.Provider>
+   return  <AppContext.Provider value={{...state}} >{children}</AppContext.Provider>
 
 }
 

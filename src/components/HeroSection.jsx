@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 const HeroSection = ({ heroData }) => {
   const { greet, title, info, info2, button, image, buttonStatus } = heroData;
   return (
-    <div className="w-full  h-screen flex items-center antialiased">
+    <div className="w-full  h-screen flex items-center antialiased z-50">
       <div className="md:max-w-screen-lg mx-auto md:h-[25rem]  flex flex-col justify-center py-2  md:flex-row gap-10 px-4">
         <div className="flex-1 flex items-center h-85">
           <div>

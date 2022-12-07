@@ -3,6 +3,7 @@ import HeroSection from '../components/HeroSection'
 import homeHero from '/images/mainimg.jpg'
 import Services from '../components/Services';
 import Testimonial from '../components/Testimonial';
+import FeaturedProduct from '../components/FeaturedProduct';
 
 const Home = () => {
   const heroData = {
@@ -18,6 +19,7 @@ const Home = () => {
   return (
     <div className=''>
      <HeroSection heroData={heroData}/> 
+     <FeaturedProduct/>
      <Services/>
      <Testimonial/>
       </div>

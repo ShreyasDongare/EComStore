@@ -9,7 +9,7 @@ const Header = () => {
   const [navOpen, setNavOpen] = useState(false);
 
   return (
-    <header className=" w-full h-16 flex px-6 justify-between fixed items-center bg-white">
+    <header className=" w-full h-16 flex px-6 justify-between fixed items-center bg-white z-50">
       <NavLink to="/">
         <img src="./images/store.png" alt="Store LOGO" className="h-10" />
       </NavLink>
@@ -32,7 +32,7 @@ const Header = () => {
         </li>
         <li className="mx-5">
           <NavLink
-            to="/product"
+            to="/products"
             className="hover:text-[#0eadb3] duration-300 focus:text-[#16989c] "
           >
             products
