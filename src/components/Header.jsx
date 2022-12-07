@@ -95,7 +95,7 @@ const Header = () => {
           </li>
           <li className="mx-5">
             <NavLink
-              to="/product"
+              to="/products"
               onClick={() => setNavOpen(!navOpen)}
               className="hover:text-[#0eadb3] duration-300 focus:text-[#16989c] px-4 cursor-pointer   py-5 my-2"
             >

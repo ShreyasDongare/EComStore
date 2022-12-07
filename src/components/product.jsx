@@ -16,14 +16,17 @@ const product = ({item}) => {
             {category}
           </div>
         </div>
-        <div className="flex justify-between py-">
+        <div className="flex justify-between my-2">
           <div>
             <p>{name}</p>
           </div>
           <div>
             <p>
-              <span>&#8377; </span>
-              {price}
+              {Intl.NumberFormat("en-IN", {
+                style: "currency",
+                currency: "INR",
+                maximumFractionDigits: 0,
+              }).format(price/100)}
             </p>
           </div>
         </div>

@@ -20,7 +20,27 @@ const reducer = (state, action) => {
       isError: true,
     };
   }
-  return state;
+  if (action.type === "IS_SINGLE_LOADING"){
+    return {
+      ...state,
+      isSingleLoading: true,
+    }
+  } 
+  if (action.type === "SINGLE_PRODUCT_DATA"){
+    return {
+      ...state,
+      isSingleLoading: false,
+      singleProduct: action.payload,
+    }
+  } r
+  if (action.type === "IS_SINGLE_ERROR") {
+    return {
+      ...state,
+    isSingleLoading: false,
+    isError: true,  
+  
+    };
+  } return state;
 };
 
 export default reducer;

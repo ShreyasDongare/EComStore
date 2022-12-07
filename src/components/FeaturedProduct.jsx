@@ -6,7 +6,7 @@ import Loading from './Loading';
 
 const FeaturedProduct = () => {
   const { isLoading, featuredProducts } = useContext(AppContext);
-  console.log(isLoading, )
+  // console.log(isLoading, )
 
   if(isLoading){
     return <Loading/>
@@ -21,11 +21,13 @@ const FeaturedProduct = () => {
       <div className='w-full flex flex-col md:flex-row items-center justify-center my-4'>
         {
           featuredProducts.map((item)=>{
-            console.log(item)
+            // console.log(item)
 
-            return <div className='px-4 w-96 my-4'>
-              <Product key={item.id} item={item}/>
-            </div>
+            return (
+              <div key={item.id} className="px-4 w-96 my-4">
+                <Product item={item} />
+              </div>
+            );
           })
         }
       </div>
