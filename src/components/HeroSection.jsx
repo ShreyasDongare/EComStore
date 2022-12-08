@@ -12,7 +12,7 @@ const HeroSection = ({ heroData }) => {
             <h1 className="text-5xl md:text-8xl">{title}</h1>
             <p className="mt-4 antialiased">{info}</p>
             <p className="pb-4 pt-1">{info2}</p>
-            <NavLink to="/product">
+            <NavLink to="/Products">
               <button
                 className={`${buttonStatus} btn my-auto hover:bg-[#0a7b80]`}
               >

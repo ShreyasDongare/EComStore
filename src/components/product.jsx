@@ -1,8 +1,15 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom';
+import React from "react";
+import { NavLink } from "react-router-dom";
 
-const product = ({item}) => {
-    const { id, name, image, price, category } = item
+const product = ({ item }) => {
+  const { id, name, image, price, category } = item;
+
+  
+  const pirceRs = Intl.NumberFormat("en-IN", {
+    style: "currency",
+    currency: "INR",
+    maximumFractionDigits: 0,
+  }).format(price / 100);
   return (
     <NavLink to={`/singleproduct/${id}`} key={id}>
       <div className="flex flex-col capitalize ">
@@ -21,18 +28,13 @@ const product = ({item}) => {
             <p>{name}</p>
           </div>
           <div>
-            <p>
-              {Intl.NumberFormat("en-IN", {
-                style: "currency",
-                currency: "INR",
-                maximumFractionDigits: 0,
-              }).format(price/100)}
-            </p>
+            <p> {pirceRs}</p>
           </div>
+          
         </div>
       </div>
     </NavLink>
   );
 };
 
-export default product
+export default product;

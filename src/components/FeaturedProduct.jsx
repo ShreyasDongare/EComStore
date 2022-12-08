@@ -2,7 +2,7 @@ import React from 'react'
 import { useContext } from 'react'
 import { AppContext } from '../context/productContext'
 import Product from '../components/product';
-import Loading from './Loading';
+import Loading from '../components/Loading';
 
 const FeaturedProduct = () => {
   const { isLoading, featuredProducts } = useContext(AppContext);

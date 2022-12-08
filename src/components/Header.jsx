@@ -9,7 +9,7 @@ const Header = () => {
   const [navOpen, setNavOpen] = useState(false);
 
   return (
-    <header className=" w-full h-16 flex px-6 justify-between fixed items-center bg-white z-50">
+    <header className=" w-full h-16 flex px-6 justify-between sticky top-0 items-center bg-white z-50">
       <NavLink to="/">
         <img src="./images/store.png" alt="Store LOGO" className="h-10" />
       </NavLink>
