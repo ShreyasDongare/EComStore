@@ -6,7 +6,7 @@ const ShowImages = ({ images = [{ url: ""}]}) => {
   //   console.log(images);
   return (
     <div className="flex flex-col justify-between">
-      <div className='flex items-center justify-center md:my-8'>
+      <div className='flex items-center justify-center '>
         <img  src={displayImg.url} alt={images[0].id} className="h-56 md:h-80 rounded" />
       </div>
       <div className="flex gap-2 justify-center my-9">

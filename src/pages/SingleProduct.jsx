@@ -9,6 +9,8 @@ import { BsShieldShaded } from "react-icons/bs";
 import { FaHandHoldingUsd } from "react-icons/fa";
 import { GiReturnArrow } from "react-icons/gi";
 import ShowImages from "../components/ShowImages";
+import Stars from "../components/Stars";
+import AddToCart from "../components/AddToCart";
 
 
 
@@ -60,17 +62,20 @@ const SingleProduct = () => {
   return (
     <div className="w-full ">
       <PageNavigation pageTitle={name} />
-      <div className="max-w-screen-lg mx-auto my-6 gap-8 px-4 flex flex-col md:flex-row">
+      <div className="max-w-screen-lg mx-auto my-12 gap-8 px-4 flex flex-col md:flex-row ">
         <div className="flex-1 flex justify-center">
-            <ShowImages images={image}/>
+          <ShowImages images={image} />
         </div>
         <div className="flex-1 ">
-          <p className="capitalize text-2xl ">{name}</p>
+          <div className=" flex justify-between ">
+            <p className="text-2xl capitalize">{name}</p>
+            <Stars stars={stars} reviews={reviews} />
+          </div>
           <p className="text-sm capitalize">
-            Brand name: <span className=" text-teal-600 cursor-pointer">{company}</span>
+            Brand name: 
+            <span className=" text-teal-600 cursor-pointer"> {company}</span>
           </p>
-          <p>{stars}</p>
-          <p>{reviews} reviews</p>
+
           <div>
             <p className="text-lg">
               M.R.P.: <del className="text-red-500">{MRP}</del>
@@ -82,24 +87,26 @@ const SingleProduct = () => {
           <p>You save {save}</p>
           <p className="my-2">{description}</p>
           <div className="flex justify-between border-t-2 border-b-2 py-2 my-4">
-            <div className="flex flex-col justify-center items-center gap-2 hover:bg-teal-100 rounded duration-500 p-2">
+            <div className="flex place-content-baseline flex-1 flex-col justify-center items-center gap-2 hover:bg-gray-200 rounded duration-500 p-2">
               <CiDeliveryTruck size={25} />
               <p className="text-xs text-center">Fast delivery</p>
             </div>
-            <div className="flex flex-col justify-center items-center gap-2 hover:bg-teal-100 rounded duration-500 p-2">
+            <div className="flex place-content-baseline flex-1 flex-col justify-center items-center gap-2 hover:bg-gray-200 rounded duration-500 p-2">
               <GiReturnArrow size={25} />
               <p className="text-xs text-center">15 days Replacement</p>
             </div>
-            <div className="flex flex-col justify-center items-center gap-2 hover:bg-teal-100 rounded duration-500 p-2">
+            <div className="flex place-content-baseline flex-1 flex-col justify-center items-center gap-2 hover:bg-gray-200 rounded duration-500 p-2">
               <BsShieldShaded size={25} />
               <p className="text-xs text-center">1 Year warranty</p>
             </div>
-            <div className="flex flex-col justify-center items-center gap-2 hover:bg-teal-100 rounded duration-500 p-2">
+            <div className="flex place-content-baseline flex-1 flex-col justify-center items-center gap-2 hover:bg-gray-200 rounded duration-500 p-2">
               <FaHandHoldingUsd size={25} />
               <p className="text-xs text-center">Pay on delivery</p>
             </div>
           </div>
           <p>{stock > 0 ? "Available in stock" : "Out of stock"}</p>
+          <hr className="border-t-2 border-t-slate-900 my-4" />
+          {stock > 0 && <AddToCart singleProduct={singleProduct}/>}
         </div>
       </div>
     </div>
