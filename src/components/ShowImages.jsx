@@ -5,7 +5,7 @@ const ShowImages = ({ images = [{ url: ""}]}) => {
     const [displayImg, setDisplayImg] = useState(images[0])
   //   console.log(images);
   return (
-    <div className="flex flex-col justify-between">
+    <div className="flex flex-col justify-start">
       <div className='flex items-center justify-center '>
         <img  src={displayImg.url} alt={images[0].id} className="h-56 md:h-80 rounded" />
       </div>

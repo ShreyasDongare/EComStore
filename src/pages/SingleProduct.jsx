@@ -14,7 +14,7 @@ import AddToCart from "../components/AddToCart";
 
 
 
-const SingleProduct = () => {
+const SingleProduct = (props) => {
   const { isSingleLoading, singleProduct, fetchSingleProduct } =
     useContext(AppContext);
   // console.log(isSingleLoading);

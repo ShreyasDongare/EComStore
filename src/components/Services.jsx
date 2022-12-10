@@ -7,7 +7,7 @@ import { RiTruckLine } from "react-icons/ri";
 
 const Services = () => {
   return (
-    <div className="w-full h-[75vh] md:h-[60vh] flex flex-col items-center justify-center antialiased">
+    <div className="w-full my-8 md:h-[60vh] flex flex-col items-center justify-center antialiased">
       <div className="my-6">
         <h1 className="capitalize text-4xl antialiased text-gray-700">
           services

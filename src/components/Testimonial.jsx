@@ -3,7 +3,7 @@ import TestImg from "/images/Testimonial.jpg";
 
 const Testimonial = () => {
   return (
-    <div className="w-full h-[50vh] bg-gray-200 flex items-center justify-center ">
+    <div className="w-full mt-8 bg-gray-200 flex items-center justify-center ">
       <div className="flex flex-col md:justify-center items-center p-4">
         <div className="max-w-screen-lg  ">
           <img

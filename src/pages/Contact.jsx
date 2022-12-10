@@ -2,13 +2,13 @@ import React from "react";
 
 const Contact = () => {
   return (
-    <div className=" w-full  flex flex-col items-center justify-center">
+    <div className=" w-full  flex flex-col items-center justify-center overflow-x-hidden">
       <div className="">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5766.988949283402!2d-79.57304133338287!3d43.721053754029235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b3a71847cf181%3A0x76adde9cf65b3e79!2s22%20Redcliff%20Blvd%2C%20Etobicoke%2C%20ON%20M9W%202H3%2C%20Canada!5e0!3m2!1sen!2sin!4v1670396960974!5m2!1sen!2sin"
           width="1600"
           height="450"
-          
+          className="w-screen"
           style={{border:0}}
           allowFullScreen=""
           loading="lazy"
