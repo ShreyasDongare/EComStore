@@ -29,7 +29,7 @@ const Product = ({ item }) => {
           <div>
             <p className="text-sm md:text-base"> {pirceRs}</p>
           </div >
-          
+            
         </div>
       </div>
     </NavLink>

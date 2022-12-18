@@ -1,11 +1,9 @@
 import React from "react";
 import FilterSection from "../components/FilterSection";
 import ProductList from "../components/ProductList";
-import { useFilterContext } from "../context/filter_Context";
 import Sort from "./Sort";
 
 const Products = () => {
-  const { filter_Products } = useFilterContext();
   
   return (
     <div className="w-full">

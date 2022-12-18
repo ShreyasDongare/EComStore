@@ -2,7 +2,7 @@ import { useContext, useReducer } from "react";
 import { useEffect } from "react";
 import { createContext } from "react";
 import { AppContext } from "./productContext";
-import reducer from "./filterReducer";
+import reducer from "../reducer/filterReducer";
 import product from "../components/Product";
 
 const FilterContext = createContext();
@@ -23,7 +23,7 @@ export const FilterContextProvider = ({ children }) => {
 
   useEffect(() => {
     dispatch({ type: "LOAD_FILTER_PRODUCTS", payload: products });
-    console.log(products);
+    // console.log(products);
   }, [products]);
 
   return (
