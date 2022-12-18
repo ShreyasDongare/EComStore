@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import PageNavigation from "../components/PageNavigation";
-import { AppContext } from "../context/productContext";
+import { AppContext } from "../context/ProductContext";
 import Loading from "../components/Loading";
 import { CiDeliveryTruck } from "react-icons/ci";
 import { BsShieldShaded } from "react-icons/bs";
@@ -11,8 +11,6 @@ import { GiReturnArrow } from "react-icons/gi";
 import ShowImages from "../components/ShowImages";
 import Stars from "../components/Stars";
 import AddToCart from "../components/AddToCart";
-
-
 
 const SingleProduct = (props) => {
   const { isSingleLoading, singleProduct, fetchSingleProduct } =
@@ -43,21 +41,21 @@ const SingleProduct = (props) => {
   if (isSingleLoading) {
     return <Loading />;
   }
-   const MRP = Intl.NumberFormat("en-IN", {
-     style: "currency",
-     currency: "INR",
-     maximumFractionDigits: 0,
-   }).format((price+250000) / 100);
-   const pirceRs = Intl.NumberFormat("en-IN", {
-     style: "currency",
-     currency: "INR",
-     maximumFractionDigits: 0,
-   }).format(price / 100);
-   const save = Intl.NumberFormat("en-IN", {
-     style: "currency",
-     currency: "INR",
-     maximumFractionDigits: 0,
-   }).format((price + 250000) / 100 - price / 100);
+  const MRP = Intl.NumberFormat("en-IN", {
+    style: "currency",
+    currency: "INR",
+    maximumFractionDigits: 0,
+  }).format((price + 250000) / 100);
+  const pirceRs = Intl.NumberFormat("en-IN", {
+    style: "currency",
+    currency: "INR",
+    maximumFractionDigits: 0,
+  }).format(price / 100);
+  const save = Intl.NumberFormat("en-IN", {
+    style: "currency",
+    currency: "INR",
+    maximumFractionDigits: 0,
+  }).format((price + 250000) / 100 - price / 100);
 
   return (
     <div className="w-full ">
@@ -72,7 +70,7 @@ const SingleProduct = (props) => {
             <Stars stars={stars} reviews={reviews} />
           </div>
           <p className="text-sm capitalize">
-            Brand name: 
+            Brand name:
             <span className=" text-teal-600 cursor-pointer"> {company}</span>
           </p>
 
@@ -106,7 +104,7 @@ const SingleProduct = (props) => {
           </div>
           <p>{stock > 0 ? "Available in stock" : "Out of stock"}</p>
           <hr className="border-t-2 border-t-slate-900 my-4" />
-          {stock > 0 && <AddToCart singleProduct={singleProduct}/>}
+          {stock > 0 && <AddToCart singleProduct={singleProduct} />}
         </div>
       </div>
     </div>

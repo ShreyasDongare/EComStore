@@ -1,8 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
-import { FilterContextProvider } from "./context/filter_Context";
-import { DataProvider } from "./context/productContext";
+import { FilterContextProvider } from "./context/FilterContext";
+import { DataProvider } from "./context/ProductContext";
 import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
