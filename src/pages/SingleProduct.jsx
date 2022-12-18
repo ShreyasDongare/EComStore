@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import PageNavigation from "../components/PageNavigation";
-import { AppContext } from "../context/ProductContext";
+import { AppContext } from "../context/Product_Context";
 import Loading from "../components/Loading";
 import { CiDeliveryTruck } from "react-icons/ci";
 import { BsShieldShaded } from "react-icons/bs";

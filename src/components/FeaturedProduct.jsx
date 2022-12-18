@@ -1,6 +1,6 @@
 import React from "react";
 import { useContext } from "react";
-import { AppContext } from "../context/ProductContext";
+import { AppContext } from "../context/Product_Context";
 import Product from "../components/product";
 import Loading from "../components/Loading";
 
