@@ -1,5 +1,5 @@
 
-const reducer = (state, action) => {
+const productReducer = (state, action) => {
   if (action.type === "IS_LOADING") {
     return { ...state, 
       isLoading: true };
@@ -9,7 +9,7 @@ const reducer = (state, action) => {
     return {
       ...state,
       isLoading:false,
-      Products: action.payload,
+      products: action.payload,
       featuredProducts: featuredProducts,
     };
   }
@@ -43,4 +43,4 @@ const reducer = (state, action) => {
   } return state;
 };
 
-export default reducer;
+export default productReducer;

@@ -14,7 +14,7 @@ const API_URL = "https://api.pujakaitem.com/api/products";
 const initialState = {
     isLoading: false,
     isError: false,
-    Products : [],
+    products : [],
     featuredProducts: [],
     isSingleLoading: false, 
     singleProduct :{}
@@ -23,14 +23,16 @@ const initialState = {
 const DataProvider =({children})=>{
 
     const [state, dispatch] = useReducer(reducer, initialState)
-    // console.log(state)
+    // console.log(state.products, "product context")
 
 const fetchProducts = async (url) => {
     dispatch({type:"IS_LOADING"})
  try {
 	 const resp = await axios.get(url);
 	  const products = await resp.data;
+  
       dispatch({type: "PRODUCT_DATA", payload: products})
+
     } catch (error) {
         dispatch({type: "IS_ERROR"})
 	
