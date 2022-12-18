@@ -9,7 +9,7 @@ import reducer from "../reducer/ProductReducer";
 const AppContext = createContext()
 
 
-// const API_URL = "https://fakestoreapi.com/products";
+
 const API_URL = "https://api.pujakaitem.com/api/products";
 const initialState = {
     isLoading: false,
