@@ -1,8 +1,8 @@
 import React from "react";
 import { useContext } from "react";
 import { AppContext } from "../context/Product_Context";
-import Product from "../components/product";
 import Loading from "../components/Loading";
+import Product_ from "./Product_";
 
 const FeaturedProduct = () => {
   const { isLoading, featuredProducts } = useContext(AppContext);
@@ -24,7 +24,7 @@ const FeaturedProduct = () => {
 
             return (
               <div key={item.id} className="px-4 w-96 my-4">
-                <Product item={item} />
+                <Product_ item={item} />
               </div>
             );
           })}

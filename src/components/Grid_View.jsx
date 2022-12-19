@@ -1,5 +1,5 @@
 import React from "react";
-import Product from "./Product";
+import Product_ from "./Product_";
 
 const Grid_View = ({ products }) => {
   return (
@@ -7,7 +7,7 @@ const Grid_View = ({ products }) => {
       {products.map((item) => {
         return (
           <div key={item.id} className="px-4 w-52 mx-auto md:w-72 my-4">
-            <Product item={item} />
+            <Product_ item={item} />
           </div>
         );
       })}
