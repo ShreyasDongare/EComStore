@@ -2,13 +2,14 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 
 const Product = ({ item }) => {
-  const { id, name, image, price, category } = item
-  
+  const { id, name, image, price, category } = item;
+
   const pirceRs = Intl.NumberFormat("en-IN", {
     style: "currency",
     currency: "INR",
     maximumFractionDigits: 0,
   }).format(price / 100);
+  
   return (
     <NavLink to={`/singleproduct/${id}`} key={id}>
       <div className="flex flex-col capitalize ">
@@ -24,12 +25,11 @@ const Product = ({ item }) => {
         </div>
         <div className="flex justify-between md:my-2">
           <div>
-            <p  className="text-sm md:text-base">{name}</p>
+            <p className="text-sm md:text-base">{name}</p>
           </div>
           <div>
             <p className="text-sm md:text-base"> {pirceRs}</p>
-          </div >
-            
+          </div>
         </div>
       </div>
     </NavLink>
